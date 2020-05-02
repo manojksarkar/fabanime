@@ -1,0 +1,156 @@
+@font-face{
+    font-family: pop-r;
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+
+@font-face{
+    font-family: pop-m;
+    src: url("./fonts/Poppins-Medium.ttf");
+}
+
+@font-face{
+    font-family: pop-sb;
+    src: url("./fonts/Poppins-SemiBold.ttf");
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: pop-r;
+    color: white;
+    background-image: radial-gradient(#4E6BA5,#121E35);
+}
+
+
+nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+
+.page{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: end;
+    padding-bottom: 50px;
+}
+
+.details h1{
+    font-size: 64px;
+    font-family: pop-m;
+}
+
+.details h2{
+    font-size: 42px;
+    padding: 10px 0;
+}
+
+.details h3{
+    font-size: 24px;
+}
+
+.hero{
+    height: 500px;
+    display: flex;
+    width: fit-content;
+    overflow: hidden;
+    align-self: center;
+    justify-self: center;
+}
+
+.hero img{
+    width: 150px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.hero-left{
+    transform: translateY(-10%);
+}
+
+.hero-right{
+    transform: translateY(10%);
+}
+
+.hero:hover .hero-left,
+.hero:hover .hero-right{
+    transform: translateY(0);
+}
+
+.pages{
+    position: absolute;
+    top:50%;
+    right:5%;
+    transform: translateY(-50%);
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 20%;
+}
+
+nav img{
+    color: white;
+    width: 40px;
+    filter: drop-shadow(1px 1px 1px white);
+}
+
+.pages div{
+    display: flex;
+}
+
+.pages p{
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.pages svg{
+    width: 16px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.pages svg:hover{
+    animation: blow 0.6s ease-in-out infinite alternate;
+}
+
+.active{
+    opacity: 1 !important;
+}
+
+@keyframes blow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(2);
+    }
+}
+
+
+@media (max-width:600px){
+    .page{
+        grid-template-columns: 5% 1fr 5%;
+    }
+    .hero{
+        grid-row: 1/2;
+        
+    }
+
+}
