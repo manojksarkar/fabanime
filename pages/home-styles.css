@@ -62,9 +62,9 @@ section{
     margin: 60px auto;
 }
 
-/* .character:nth-child(even){
+.character:nth-child(even){
     flex-direction: row-reverse;
-} */
+}
 
 .character:nth-child(even) h1{
     align-self: flex-end;
@@ -74,6 +74,7 @@ section{
     max-width: 250px;
     max-height: 400px;
     box-shadow: 2px 2px 3px rgba(78, 107, 165, 0.678);
+    align-self: center;
 }
 
 .details{
@@ -116,4 +117,38 @@ section{
 
 .anime-list{
     grid-column: 3/4;
+}
+
+
+@media (max-width:700px){
+    header{
+        padding-left: 0;
+    }
+    .logo{
+        left: 50%;
+        transform: translateX(-50%);
+        height: 30%;
+        max-width: 80%;
+    }
+    .details h1{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px){
+    .character,
+    .character:nth-child(even){
+        flex-direction: column;
+    }
+
+    h1,
+    .character:nth-child(even) h1{
+        align-self: center;
+    }
+
+    .details,
+    .details p{
+        padding: 5%;
+        font-size: 16px;
+    }
 }
