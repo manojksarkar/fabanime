@@ -35,6 +35,7 @@ h1,h2,h3{
 
 header{
     min-height: 30vh;
+    width: 100vw;;
     background-image: linear-gradient(to bottom, #121E35, #4E6BA5);
     padding-left: 10%;
     position: relative;
@@ -139,6 +140,10 @@ section{
     .character,
     .character:nth-child(even){
         flex-direction: column;
+    }
+
+    .logo{
+        width: 50vw;
     }
 
     h1,
