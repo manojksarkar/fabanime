@@ -68,34 +68,34 @@ function init() {
 
     // Mouse Scroll Handler
 
-    const throttle = (func, limit) => {
-        let inThrottle
-        return function () {
-            const args = arguments
-            const context = this
-            if (!inThrottle) {
-                func.apply(context, args)
-                inThrottle = true
-                setTimeout(() => inThrottle = false, limit)
-            }
-        }
-    }
+    // const throttle = (func, limit) => {
+    //     let inThrottle
+    //     return function () {
+    //         const args = arguments
+    //         const context = this
+    //         if (!inThrottle) {
+    //             func.apply(context, args)
+    //             inThrottle = true
+    //             setTimeout(() => inThrottle = false, limit)
+    //         }
+    //     }
+    // }
 
-    document.addEventListener("wheel", throttle(scrollChange, 1500));
-    document.addEventListener("touchmove", throttle(scrollChange, 1500));
+    // document.addEventListener("wheel", throttle(scrollChange, 1500));
+    // // document.addEventListener("touchmove", throttle(scrollChange, 1500));
 
-    function scrollChange(e){
-        console.log(e);
+    // function scrollChange(e){
+    //     console.log(e);
         
-        let scrollPageNumber = currentPageNumber;
+    //     let scrollPageNumber = currentPageNumber;
 
-        if(e.deltaY < 0) scrollPageNumber= ((scrollPageNumber-1) + pages.length)%pages.length; 
-        else scrollPageNumber = (scrollPageNumber+1) % pages.length;
+    //     if(e.deltaY < 0) scrollPageNumber= ((scrollPageNumber-1) + pages.length)%pages.length; 
+    //     else scrollPageNumber = (scrollPageNumber+1) % pages.length;
 
-        const dot = dots[scrollPageNumber];
-        changeDots(dot);
-        changePage(scrollPageNumber);    
-    }
+    //     const dot = dots[scrollPageNumber];
+    //     changeDots(dot);
+    //     changePage(scrollPageNumber);    
+    // }
 
 }
 

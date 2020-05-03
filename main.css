@@ -29,7 +29,7 @@ body{
 
 
 nav{
-    min-height: 10vh;
+    height: 10vh;
     width: 90%;
     margin: auto;
     display: flex;
@@ -46,6 +46,7 @@ nav{
 .naruto,
 .death-note{ 
     position: absolute;
+    top: 10vh;
     bottom: 0%;
     left: 0%;
     width: 100%;
@@ -157,7 +158,8 @@ nav img{
         grid-template-columns: 5% 1fr 5%;
     }
     .hero{
-        grid-column: 2/3;  
+        grid-column: 2/3;
+        height: auto;
     }
     .details h1{
         font-size: 32px;
@@ -166,7 +168,15 @@ nav img{
         font-size: 24px;
     }
     .hero img{
-        height: auto;
-        width: auto;
+        height: 350px;
+        width: 100px;
+        transform: translateY(0%);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media (max-height: 600px){
+    .details{
+        display: none;
     }
 }
