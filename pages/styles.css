@@ -24,8 +24,20 @@
 body{
     font-family: pop-r;
     color: white;
+}
+
+.bg-db{
     background-color: #121E35;
 }
+
+.bg-naruto{
+    background-color: #2B2120;
+}
+
+.bg-dn{
+    background-color: #111010;
+}
+
 
 h1,h2,h3{
     font-family: pop-sb;
@@ -36,17 +48,41 @@ h1,h2,h3{
 header{
     min-height: 30vh;
     width: 100vw;;
-    background-image: linear-gradient(to bottom, #121E35, #4E6BA5);
     padding-left: 10%;
     position: relative;
+}
+
+.bg-db header{
+    background-image: linear-gradient(to bottom, #121E35, #4E6BA5);
     box-shadow: 0px 5px 4px rgba(78, 107, 165, 0.678);
+}
+
+.bg-naruto header{
+    background-image: linear-gradient(to bottom, #2B2120, #A55D4E);
+    box-shadow: 0px 5px 4px rgba(165, 93, 78, 0.678);
+}
+
+.bg-dn header{
+    background-image: linear-gradient(to bottom, #111010, #AA9090);
+    box-shadow: 0px 5x 4px rgba(170, 144, 144, 0.678);
 }
 
 .logo{
     position: absolute;
+    max-width: 40%;
+    max-height: 20vh;
     bottom: 20px;
     left: 15vw;
+}
+
+.bg-db .logo{
     filter: drop-shadow(4px 5px 2px #121E35);
+}
+.bg-naruto .logo{
+    filter: drop-shadow(4px 5px 2px #2B2120);
+}
+.bg-dn .logo{
+    filter: drop-shadow(4px 5px 2px #111010);
 }
 
 section{
@@ -74,11 +110,22 @@ section{
 .image{
     max-width: 250px;
     max-height: 400px;
-    box-shadow: 2px 2px 3px rgba(78, 107, 165, 0.678);
     align-self: center;
 }
 
-.bg{
+.bg-db .image{
+    box-shadow: 2px 2px 3px rgba(78, 107, 165, 0.678);
+}
+
+.bg-naruto .image{
+    box-shadow: 2px 2px 3px rgba(165, 93, 78, 0.678);
+}
+.bg-dn .image{
+    box-shadow: 2px 2x 3px rgba(170, 144, 144, 0.678);
+}
+
+
+.bg-image{
     position: fixed;
     top:-10vh;
     height: 120vh;
@@ -90,8 +137,8 @@ section{
     transition: opacity 0.3s ease-in-out;
 }
 
-.character:hover .bg,
-.character:focus .bg{
+.character:hover .bg-image,
+.character:focus .bg-image{
     opacity: 0.3;
 }
 
@@ -117,10 +164,22 @@ section{
 
 .series{
     min-height: 50vh;
-    background-image: linear-gradient(to bottom, #121E35, #4E6BA5);
     display: grid;
     grid-template-columns: 15vw 1fr auto 1fr 15vw;
 }
+
+.bg-db .series{
+    background-image: linear-gradient(to bottom, #121E35, #4E6BA5);
+}
+
+.bg-naruto .series{
+    background-image: linear-gradient(to bottom, #2B2120, #A55D4E);
+}
+
+.bg-dn .series{
+    background-image: linear-gradient(to bottom, #111010, #AA9090);
+}
+
 
 .series h1{
     grid-column: 3/4;
