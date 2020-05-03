@@ -24,7 +24,7 @@
 body{
     font-family: pop-r;
     color: white;
-    background-image: radial-gradient(#4E6BA5,#121E35);
+    background-image: radial-gradient(#4E6BA5,black 80%);
 }
 
 
@@ -37,11 +37,20 @@ nav{
     padding: 20px 0;
 }
 
-
 .page{
     min-height: 90vh;
     display: grid;
     grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.naruto,
+.death-note{ 
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    opacity: 0%;
+    pointer-events: none;
 }
 
 .details{
@@ -65,16 +74,15 @@ nav{
 }
 
 .hero{
-    max-height: 500px;
+    height: 500px;
     display: flex;
-    width: fit-content;
     overflow: hidden;
     align-self: center;
     justify-self: center;
 }
 
 .hero img{
-    width: 150px;
+    max-width: 150px;
     transition: transform 0.3s ease-out;
     cursor: pointer;
 }
@@ -92,7 +100,7 @@ nav{
     transform: translateY(0);
 }
 
-.pages{
+.slides{
     position: absolute;
     top:50%;
     right:5%;
@@ -111,22 +119,22 @@ nav img{
     filter: drop-shadow(1px 1px 1px white);
 }
 
-.pages div{
+.slides div{
     display: flex;
 }
 
-.pages p{
+.slides p{
     padding-right: 20px;
     padding-top: 5px;
 }
 
-.pages svg{
+.slides svg{
     width: 16px;
     opacity: 0.5;
     cursor: pointer;
 }
 
-.pages svg:hover{
+.slides svg:hover{
     animation: blow 0.6s ease-in-out infinite alternate;
 }
 

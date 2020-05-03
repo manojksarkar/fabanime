@@ -152,26 +152,18 @@ section{
         left: 50%;
         transform: translateX(-50%);
         height: 30%;
-        max-width: 80%;
+        width: 50vw;
     }
-    .details h1{
+    
+    h1,
+    .character:nth-child(even) h1{
         font-size: 32px;
+        align-self: center;
     }
-}
 
-@media (max-width: 500px){
     .character,
     .character:nth-child(even){
         flex-direction: column;
-    }
-
-    .logo{
-        width: 50vw;
-    }
-
-    h1,
-    .character:nth-child(even) h1{
-        align-self: center;
     }
 
     .details,

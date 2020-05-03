@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>fabAnime</title>
 </head>
 
 <body>
@@ -22,25 +22,47 @@
                 <h2>~Akira Toriyama</h2>
                 <p>Something has to be written will see.</p>
             </div>
-            <a class="hero" href="./pages/db-home.html">
+            <a class="hero" href="./pages/db.html">
                 <img class="hero-left" src="./images/Dragon Ball/goku-left.jpg" alt="goku">
                 <img class="hero-right" src="./images/Dragon Ball/goku-right.jpg" alt="goku">
             </a>
         </section>
-        <div class="pages">
-            <div class="page-index">
+        <section class="page naruto">
+            <div class="details">
+                <h1>Naruto</h1>
+                <h2>~Akira Toriyama</h2>
+                <p>Something has to be written will see.</p>
+            </div>
+            <a class="hero" href="./pages/naruto.html">
+                <img class="hero-left" src="./images/Naruto/naruto-left.jpg" alt="goku">
+                <img class="hero-right" src="./images/Naruto/naruto-right.jpg" alt="goku">
+            </a>
+        </section>
+        <section class="page death-note">
+            <div class="details">
+                <h1>Death Note</h1>
+                <h2>~Akira Toriyama</h2>
+                <p>Something has to be written will see.</p>
+            </div>
+            <a class="hero" href="./pages/db-home.html">
+                <img class="hero-left" src="./images/Dragon Ball/death-note-collage-framed-maxi-poster-1.14.png" alt="goku">
+                <img class="hero-right" src="./images/Dragon Ball/death-note-collage-framed-maxi-poster-1.14 (1).png" alt="goku">
+            </a>
+        </section>
+        <div class="slides">
+            <div class="slide">
                 <p>01</p>
                 <svg class="dot active" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16.5" cy="16.5" r="16.5" fill="#C4C4C4" />
                 </svg>
             </div>
-            <div class="page-index">
+            <div class="slide">
                 <p>02</p>
                 <svg class="dot" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16.5" cy="16.5" r="16.5" fill="#C4C4C4" />
                 </svg>
             </div>
-            <div class="page-index">
+            <div class="slide">
                 <p>03</p>
                 <svg class="dot" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="16.5" cy="16.5" r="16.5" fill="#C4C4C4" />
@@ -48,7 +70,9 @@
             </div>
         </div>
     </main>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
