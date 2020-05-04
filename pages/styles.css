@@ -259,4 +259,7 @@ footer h3 {
   .details p:nth-child(3){
     display: none;
   }
+  footer{
+    flex-direction: column;
+  }
 }
