@@ -37,6 +37,42 @@ nav{
     padding: 20px 0;
 }
 
+.logo{
+    z-index: 2;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-color: black;
+    padding-bottom: 10px;
+    position: absolute;
+    transform: translateY(-20vh);
+    opacity: 0;
+    z-index: 1;
+    box-shadow: 0px 5px 3px rgba(0,0,0,0.2);
+}
+
+a{
+    text-decoration: none;
+    color: snow;
+}
+
+.icon{
+    font-size: 2rem;
+    text-decoration: none;
+    filter: drop-shadow(0px 5px 3px rgba(255,255,255,0.5));
+    margin: 20px;
+}
+
 .page{
     min-height: 90vh;
     display: grid;
@@ -47,15 +83,9 @@ nav{
 }
 
 .naruto,
-.death-note{ 
-    position: absolute;
-    top: 10vh;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    pointer-events: none;
+.death-note{
+    opacity: 0; 
+    display: none;
 }
 
 .details{
@@ -175,10 +205,15 @@ nav img{
     }
     .hero{
         grid-column: 2/3;
+        grid-row: 1;
         height: auto;
 
         -ms-grid-column: 2;
         -ms-grid-column-span: 1;
+    }
+    .details{
+        justify-self: center;
+        text-align: center;
     }
     .details h1{
         font-size: 32px;
@@ -186,11 +221,20 @@ nav img{
     .details h2{
         font-size: 24px;
     }
+    .details p{
+        display: none;
+    }
     .hero img{
         height: 350px;
         width: 100px;
         transform: translateY(0%);
         transition: transform 0.3s ease-in-out;
+    }
+    
+    .slides{
+        position: absolute;
+        top:35%;
+        transform: translateY(-35%);
     }
 }
 
