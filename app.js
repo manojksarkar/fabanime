@@ -1,4 +1,5 @@
 function init() {
+    const animes = document.querySelectorAll(".anime");
     const pages = document.querySelectorAll(".page");
     const dots = document.querySelectorAll(".dot");
     const backgroundColors = [
@@ -14,6 +15,16 @@ function init() {
         dot.addEventListener("click", function () {
             changeDots(this);
             changePage(index);
+            changeAnime(index);
+        });
+    });
+
+    animes.forEach((anime, index) => {
+        anime.addEventListener("click", function () {
+            const dot = dots[index];
+            changeDots(dot);
+            changePage(index);
+            changeAnime(index);
         });
     });
 
@@ -65,6 +76,14 @@ function init() {
 
     }
 
+    function changeAnime(index){
+        const hide = document.querySelector(".hide");
+
+        hide.classList.remove("hide");
+        animes[index].classList.add("hide");
+    }
+
+
     // Mouse Scroll Handler
 
     const throttle = (func, limit) => {
@@ -94,6 +113,7 @@ function init() {
         const dot = dots[scrollPageNumber];
         changeDots(dot);
         changePage(scrollPageNumber);
+        changeAnime(scrollPageNumber);
     }
 
 
